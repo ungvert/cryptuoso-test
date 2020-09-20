@@ -1,9 +1,4 @@
-import {
-  Box,
-  Container,
-  Typography,
-  Link as MuiLink,
-} from '@material-ui/core';
+import { Box, Container, Typography, Link as MuiLink } from '@material-ui/core';
 import Link from 'next/link';
 
 const IndexPage = () => (
