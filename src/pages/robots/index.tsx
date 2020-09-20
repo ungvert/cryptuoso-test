@@ -3,7 +3,6 @@ import { jsx, css } from '@emotion/core';
 import Link from 'next/link';
 import {
   Box,
-  Button,
   Card,
   CardActions,
   CardContent,
@@ -14,18 +13,6 @@ import {
 import { gql, useQuery } from '@apollo/client';
 
 export const ROBOTS_INDEX_QUERY = gql`
-  #   ($first: Int!, $skip: Int!) {
-  #     allPosts(orderBy: { createdAt: desc }, first: $first, skip: $skip) {
-  #       id
-  #       title
-  #       votes
-  #       url
-  #       createdAt
-  #     }
-  #     _allPostsMeta {
-  #       count
-  #     }
-  #   }
   query robots {
     robots(order_by: { code: asc }, limit: 10) {
       id

@@ -1,15 +1,26 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import {
+  Box,
+  Container,
+  Typography,
+  Link as MuiLink,
+} from '@material-ui/core';
+import Link from 'next/link';
 
 const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
-)
+  <Container>
+    <Box
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      height="100vh"
+    >
+      <Typography variant="h2">
+        <MuiLink component={Link} href={`/robots`}>
+          Robots list
+        </MuiLink>
+      </Typography>
+    </Box>
+  </Container>
+);
 
-export default IndexPage
+export default IndexPage;
