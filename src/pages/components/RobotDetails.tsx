@@ -26,7 +26,7 @@ const RobotDetails = ({ id, code, initialSettings }: Props) => {
         <Typography>{id}</Typography>
       </Box>
 
-      <Box display="flex">
+      <Box display="flex" flexWrap="wrap">
         <Box my={3}>
           <Paper>
             <Box p={3}>
@@ -45,7 +45,7 @@ const RobotDetails = ({ id, code, initialSettings }: Props) => {
           </Paper>
         </Box>
 
-        <Box my={3}>
+        <Box my={3} mx={4}>
           <SettingsForm settings={settings} setSettings={setSettings} />
         </Box>
       </Box>

@@ -23,8 +23,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     }
   }, []);
 
-  console.log('pageProps', pageProps);
-  const apolloClient = useApollo(pageProps.initialApolloState);
+  const apolloClient = useApollo();
 
   return (
     <ApolloProvider client={apolloClient}>
