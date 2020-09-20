@@ -5,8 +5,10 @@ type Props = {
   settings: NormalizedSettingsItem[];
   setSettings: React.Dispatch<React.SetStateAction<NormalizedSettingsItem[]>>;
 };
-export const SettingsForm = ({ settings, setSettings }: Props) => {
+
+const SettingsForm = ({ settings, setSettings }: Props) => {
   const [formSettings, setFormSettings] = useState(settings);
+  if (!settings) return null;
   return (
     <Paper>
       <Box p={3}>
@@ -39,3 +41,5 @@ export const SettingsForm = ({ settings, setSettings }: Props) => {
     </Paper>
   );
 };
+
+export default SettingsForm;

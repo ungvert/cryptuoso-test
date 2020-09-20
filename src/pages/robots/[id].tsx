@@ -4,7 +4,7 @@ import { Typography } from '@material-ui/core';
 import { gql, useQuery } from '@apollo/client';
 import { useRouter } from 'next/dist/client/router';
 import flatten from 'lodash/flatten';
-import { RobotDetails } from '../components/RobotDetails';
+import RobotDetails from '../components/RobotDetails';
 
 export const ROBOT_DETAILS_QUERY = gql`
   query Robot($id: uuid!) {

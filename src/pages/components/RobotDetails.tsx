@@ -1,16 +1,17 @@
 import { Container, Typography, Box, Paper } from '@material-ui/core';
 import React, { useState } from 'react';
-import { SettingsForm } from './SettingsForm';
+import SettingsForm from './SettingsForm';
 type Props = {
   id: string | undefined;
   code: string | undefined;
   initialSettings: NormalizedSettingsItem[];
 };
-export const RobotDetails = ({ id, code, initialSettings }: Props) => {
+const RobotDetails = ({ id, code, initialSettings }: Props) => {
   const [settings, setSettings] = useState<NormalizedSettingsItem[]>(
     initialSettings
   );
 
+  if (!initialSettings) return null;
   return (
     <Container>
       <Typography variant="h2">Robot details</Typography>
@@ -51,3 +52,5 @@ export const RobotDetails = ({ id, code, initialSettings }: Props) => {
     </Container>
   );
 };
+
+export default RobotDetails;

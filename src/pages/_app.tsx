@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Global, jsx, css } from '@emotion/core';
+import { jsx } from '@emotion/core';
 import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming';
 import React from 'react';
 import Head from 'next/head';
